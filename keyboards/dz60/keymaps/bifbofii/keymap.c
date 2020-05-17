@@ -63,19 +63,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * ,-----------------------------------------------------------------------------------------.
    * |     | F1  | F2  | F3  | F4  | F5  | F6  | F7  | F8  | F9  | F10 | F11 | F12 |    Del    |
    * |-----------------------------------------------------------------------------------------+
-   * |        |     |     |     |     |     | Prev| V-  | V+  | Next| Play|     |     |  Enter |
+   * |        |     |     |     |     |Mute | Prev| V-  | V+  | Next| Play|     |     |  Enter |
    * |-----------------------------------------------------------------------------------+     +
-   * | Caps    |     |  <  |     |     |  >  |  R  |  D  |  U  |  L  |     |     |       |     |
+   * | Caps    |     |  <  |     |     |  >  |Left |Down | Up  |Right|     |     |       |     |
    * |-----------------------------------------------------------------------------------------+
-   * | Shift     |     |     |     |     |     |     | Mute|     |     |     |         Fnc2    |
+   * | Shift     |     |     |     |     |     |Home |Page-|Page+| End |     |         Fnc2    |
    * |-----------------------------------------------------------------------------------------+
    * | Ctrl | Super |  Alt  |             Trans                 |  Alt  | Super |  Ctrl |      |
    * `-----------------------------------------------------------------------------------------'
    */
 	[FUNCTIONS_1] = LAYOUT_60_iso_5x1u(KC_NO, KC_F1, KC_F2, KC_F3, KC_F4, KC_F5, KC_F6, KC_F7, KC_F8, KC_F9, KC_F10, KC_F11, KC_F12, KC_DEL,
-      KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_MPRV, KC__VOLDOWN, KC_VOLU, KC_MNXT, KC_MEDIA_PLAY_PAUSE, KC_NO, KC_NO,
+      KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC__MUTE, KC_MPRV, KC__VOLDOWN, KC_VOLU, KC_MNXT, KC_MEDIA_PLAY_PAUSE, KC_NO, KC_NO,
       KC_CAPS, KC_NO, KC_WBAK, KC_NO, KC_NO, KC_WFWD, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT, KC_NO, KC_NO, KC_NO, KC_ENT,
-      KC_LSFT, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC__MUTE, KC_NO, KC_NO, KC_NO, MO(FUNCTIONS_2),
+      KC_LSFT, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_NO, MO(FUNCTIONS_2),
       KC_LCTL, KC_LGUI, KC_LALT, KC_TRNS, KC_RALT, KC_RGUI, KC_RGUI, KC_RCTL, KC_NO),
 
   /* More Function keys
@@ -84,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |-----------------------------------------------------------------------------------------+
    * |        |     |     |     |     |     |     |     |     |     |     |     |     |  Enter |
    * |-----------------------------------------------------------------------------------+     +
-   * | Caps    |     |     |     |     |     | Home|Page-|Page+| End |     |     |       |     |
+   * | Caps    |     |     |     |     |     |     |     |     |     |     |     |       |     |
    * |-----------------------------------------------------------------------------------------+
    * | Shift     |     |     |     |     |     |     |     |     |     |     |      Trans      |
    * |-----------------------------------------------------------------------------------------+
@@ -93,26 +93,26 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    */
 	[FUNCTIONS_2] = LAYOUT_60_iso_5x1u(KC_NO, KC_F13, KC_F14, KC_F15, KC_F16, KC_F17, KC_F18, KC_F19, KC_F20, KC_F21, KC_F22, KC_F23, KC_F24, KC_DEL,
       KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
-      KC_CAPS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_HOME, KC_PGDN, KC_PGUP, KC_END, KC_NO, KC_NO, KC_NO, KC_ENT,
+      KC_CAPS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_ENT,
       KC_LSFT, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_TRNS,
       KC_LCTL, KC_LGUI, KC_LALT, KC_NO, KC_RALT, KC_RGUI, KC_RGUI, KC_RCTL, KC_NO),
 
   /* German Umlauts
    * ,-----------------------------------------------------------------------------------------.
-   * |     |     |     |     |     |     |     |     |     |     |     |  ß  |     |   Bkspc   |
+   * |     |     |     |     |     |     |     |     |     |     |     |     |     |   Bkspc   |
    * |-----------------------------------------------------------------------------------------+
-   * |        |     |     |  €  |     |     |     |     |     |     |     |  Ü  |     |  Enter |
+   * |        |     |     |  €  |     |     |     |  Ü  |     |  Ö  |     |     |     |  Enter |
    * |-----------------------------------------------------------------------------------+     +
-   * | Trans   |     |     |     |     |     |     |     |     |     |  Ö  |  Ä  |       |     |
+   * | Trans   |  Ä  |  ß  |     |     |     |     |     |     |     |     |     |       |     |
    * |-----------------------------------------------------------------------------------------+
    * | Trans     |     |     |  ©  |     |     |     |     |     |     |     |      Trans      |
    * |-----------------------------------------------------------------------------------------+
    * | Ctrl | Super |  Alt  |              Space                |  Alt  | Super |  Ctrl |      |
    * `-----------------------------------------------------------------------------------------'
    */
-	[UNICODE] = LAYOUT_60_iso_5x1u(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, X(SS), KC_NO, KC_BSPC,
-      KC_NO, KC_NO, KC_NO, X(EUR), KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, XP(SUE, BUE), KC_NO,
-      KC_TRNS, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, XP(SOE, BOE), XP(SAE, BAE), KC_NO, KC_ENT,
+	[UNICODE] = LAYOUT_60_iso_5x1u(KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_BSPC,
+      KC_NO, KC_NO, KC_NO, X(EUR), KC_NO, KC_NO, KC_NO, XP(SUE, BUE), KC_NO, XP(SOE, BOE), KC_NO, KC_NO, KC_NO,
+      KC_TRNS, XP(SAE, BAE), X(SS), KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_ENT,
       KC_LSFT, KC_NO, KC_NO, KC_NO, X(CPR), KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_RSFT,
       KC_LCTL, KC_LGUI, KC_LALT, KC_SPC, KC_RALT, KC_RGUI, KC_RGUI, KC_RCTL, KC_NO),
 
