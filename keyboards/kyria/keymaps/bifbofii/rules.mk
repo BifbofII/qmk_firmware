@@ -6,4 +6,5 @@ UNICODEMAP_ENABLE = yes
 SPLIT_TRANSPORT = custom
 
 SRC += transport.c \
-	serial.c
+	serial.c \
+	hid_oled.c

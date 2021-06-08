@@ -15,6 +15,8 @@
  */
 #include QMK_KEYBOARD_H
 
+#include "hid_oled.h"
+
 // ====== Unicode ======
 // Character names
 enum unicode_names {
@@ -234,11 +236,28 @@ static void render_status(void) {
 }
 
 void oled_task_user(void) {
+#    ifdef HID_OLED
+    static Hid_oled_content_t content;
+    if (is_keyboard_master()) {
+        render_status();  // Renders the current keyboard state (layer, lock, caps, scroll, etc)
+    } else {
+        if (hid_oled_change_flags() & HID_OLED_SLAVE_CHANGE) {
+            hid_oled_get_slave_content(&content);
+            if (content.type == CONTENT_HW_DEFAULT) {
+                render_kyria_logo();
+            } else {
+                hid_oled_write_content(&content);
+                hid_oled_reset_change_flags(HID_OLED_SLAVE_CHANGE);
+            }
+        }
+    }
+#    else
     if (is_keyboard_master()) {
         render_status();  // Renders the current keyboard state (layer, lock, caps, scroll, etc)
     } else {
         render_kyria_logo();
     }
+#    endif
 }
 #endif
 
