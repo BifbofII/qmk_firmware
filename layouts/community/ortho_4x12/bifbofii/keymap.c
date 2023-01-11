@@ -160,14 +160,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
  * | XXX | XXX | XXX | XXX | XXX |QK_BOOT| XXX | XXX | XXX | XXX | XXX | XXX |
  * +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
- * | XXX | XXX | XXX | XXX | XXX |    XXX    | XXX | XXX | XXX | XXX | XXX |
+ * | XXX | XXX | XXX | XXX | XXX |    XXX    | XXX | XXX | XXX | XXX |     |
  * +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
  */
 [SPECIALS] = LAYOUT_ortho_4x12(
     XXXXXXX, XXXXXXX, UC_WINC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, UC_MAC,  XXXXXXX, XXXXXXX,
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, UC_LINX, XXXXXXX, XXXXXXX,
     XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+    XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______
 )
 
 };

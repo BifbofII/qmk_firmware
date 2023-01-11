@@ -84,6 +84,6 @@ Holding the Space Bar switches to the Function layer.
 +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
 | XXX | XXX | XXX | XXX | XXX |QK_BOOT| XXX | XXX | XXX | XXX | XXX | XXX |
 +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
-| XXX | XXX | XXX | XXX | XXX | XXX | XXX | XXX | XXX | XXX | XXX | XXX |
+| XXX | XXX | XXX | XXX | XXX | XXX | XXX | XXX | XXX | XXX | XXX |     |
 +-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+-----+
 ```
